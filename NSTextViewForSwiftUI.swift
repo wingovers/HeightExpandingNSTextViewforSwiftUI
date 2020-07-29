@@ -4,7 +4,7 @@ import SwiftUI
 // https://stackoverflow.com/a/63144255/11420986
 
 // Wraps the NSTextView in a frame that can interact with SwiftUI
-struct NSTextView: View {
+struct TextFieldAppKit: View {
 
     private var placeholder: NSAttributedString
     @Binding private var text: NSAttributedString
