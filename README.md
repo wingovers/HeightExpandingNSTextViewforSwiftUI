@@ -3,7 +3,7 @@ A vertically-expanding, rich-text NSTextField for Swift that isn't ugly.
 
 Here's a demo to boost your typing ego:
 
-![Demo](https://github.com/wingovers/HeightExpandingNSTextViewforSwiftUI/blob/master/typodemo.mov "Demo Video")
+https://imgur.com/a/zDvHvEs
 
 * You can use the Binding extension to save data upon editing end to your persistent store.
 * You can set the font, as can users by right clicking.
