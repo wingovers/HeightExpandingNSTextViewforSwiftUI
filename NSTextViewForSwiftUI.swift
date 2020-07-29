@@ -17,10 +17,11 @@ struct TextFieldAppKit: View {
           text: Binding<NSAttributedString>,
           nsFont: NSFont) {
         self.placeholder = placeholder
+        self.nsFont = nsFont
         _text = text
         _textIsEmpty = State(wrappedValue: text.wrappedValue.string.isEmpty)
-        self.nsFont = nsFont
-        _dynamicHeight = State(initialValue: nsFont.pointSize)
+        _dynamicHeight = State(initialValue: nsFont.pointSize * 1.18) // Works on my screen for 15-30 font sizes, but magic number patch solution.
+        _textViewInset = State(initialValue: nsFont.pointSize / 2 + 1) // Personal preference
     }
 
     var body: some View {
