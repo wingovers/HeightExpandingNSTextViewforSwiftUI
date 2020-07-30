@@ -13,4 +13,5 @@ In the Coordinator class, you can
 * take away spell checking and autocomplete, among other things
 
 Bugs:
-At the moment it has a slight shudder on load because I don't have the right magic CGFloat as the dynamicHeight default value for that font. I'm trying to figure out how to set that programmatically.
+* Incompatible with .layoutPriority being set on any parent/aunt/uncle views, even if the priority for this view is higher by a million points. Ugh. Radar filed.
+* There can be a slight shudder in the render on load due to the initial value for dynamicHeight being set without perfect accuracy. Right now I'm setting it with a magic multiplier against the font size, but there's probably a better way to piece together all the padding and height dimensions. This was also an issue in Asperi's UIKit version.
